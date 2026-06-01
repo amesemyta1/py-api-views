@@ -62,9 +62,7 @@ class GenreDetail(APIView):
 
 
 class ActorList(
-    mixins.ListModelMixin,
-    mixins.CreateModelMixin,
-    GenericAPIView
+    mixins.ListModelMixin, mixins.CreateModelMixin, GenericAPIView
 ):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
